@@ -75,8 +75,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CannonBallBehavior.cs" />
     <Compile Include="Assets\Scripts\CrashCam.cs" />
-    <Compile Include="Assets\Scripts\SphereBehavior.cs" />
+    <Compile Include="Assets\Scripts\DualAxisRotationController.cs" />
+    <Compile Include="Assets\Scripts\RotationControlX.cs" />
+    <Compile Include="Assets\Scripts\RotationControlY.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
