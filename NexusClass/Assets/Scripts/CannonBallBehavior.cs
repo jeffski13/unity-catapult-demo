@@ -25,7 +25,7 @@ public class CannonBallBehavior : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space)) {
             //make sure missile has not been launched 
             if (!mizzilesFired && framesHeld < 500) {
-                framesHeld++;
+                framesHeld+= 10;
                 powerText.text = "Power: " + framesHeld;
             }
         }
