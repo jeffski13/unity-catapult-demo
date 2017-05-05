@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ColorChangeDemo/WallHitColorChange.unity
+  isLoaded: 1
+  isActive: 1
