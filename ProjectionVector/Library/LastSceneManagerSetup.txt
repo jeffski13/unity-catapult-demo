@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ArrowProjection/arrowProjection.unity
+  isLoaded: 1
+  isActive: 1
