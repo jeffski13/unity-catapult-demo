@@ -50,8 +50,8 @@ public class CannonBehavior : MonoBehaviour {
                 //FIRE ZE MISSILES!
                 mizzilesFired = true;
                 Vector3 newAngle = cannonBody.getCannonAim();
-                //cannonBall.FireUpAndOver(newAngle,framesHeld);
-                GetComponent<SpawnProjectile>().FireUpAndOver(newAngle,framesHeld);
+                cannonBall.FireUpAndOver(newAngle,framesHeld);
+                //GetComponent<SpawnProjectile>().FireUpAndOver(newAngle,framesHeld);
             }
         }
 
