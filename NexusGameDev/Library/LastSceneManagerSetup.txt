@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CannonBallDemo/catapult.unity
+- path: Assets/ColorChangeDemo/WallHitColorChange.unity
   isLoaded: 1
   isActive: 1

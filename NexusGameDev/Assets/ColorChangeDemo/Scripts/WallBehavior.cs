@@ -25,6 +25,7 @@ public class WallBehavior : MonoBehaviour {
             //NOTE: returns false if couldnt parse string
             albedoColor = Color.red;
         }
-        material.SetColor("_Color", albedoColor);
+        //material.SetColor("_Color", albedoColor);
+        material.color = albedoColor;
     }
 }

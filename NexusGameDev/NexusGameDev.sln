@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusGameDev", "NexusGameDev.csproj", "{5A3BD81C-D7EF-DB96-4CC0-7B5CA23D1A07}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusGameDev", "Assembly-CSharp.csproj", "{593F0407-E0A1-E81F-8B1F-407ADCF9B70E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A3BD81C-D7EF-DB96-4CC0-7B5CA23D1A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A3BD81C-D7EF-DB96-4CC0-7B5CA23D1A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A3BD81C-D7EF-DB96-4CC0-7B5CA23D1A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A3BD81C-D7EF-DB96-4CC0-7B5CA23D1A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593F0407-E0A1-E81F-8B1F-407ADCF9B70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593F0407-E0A1-E81F-8B1F-407ADCF9B70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593F0407-E0A1-E81F-8B1F-407ADCF9B70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593F0407-E0A1-E81F-8B1F-407ADCF9B70E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
