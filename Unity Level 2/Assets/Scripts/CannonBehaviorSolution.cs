@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CannonBehavior : MonoBehaviour {
+public class CannonBehaviorSolution : MonoBehaviour {
 
 //true if on last frame, fire button was down
     private bool fire1Down = false;
@@ -15,16 +15,13 @@ public class CannonBehavior : MonoBehaviour {
 
     [SerializeField]
     //private List<Boxy> boxys;
-    private List<Boxy> boxys;
+    private List<BoxySolution> boxys;
 
     [SerializeField]
     private Text powerText;
 
     [SerializeField]
     private Image powerbar;
-
-    [SerializeField]
-    private CannonBallBehavior cannonBall;
 
     [SerializeField]
     private CannonBodyBehavior cannonBody;
@@ -51,15 +48,14 @@ public class CannonBehavior : MonoBehaviour {
                 //FIRE ZE MISSILES!
                 mizzilesFired = true;
                 Vector3 newAngle = cannonBody.getCannonAim();
-                cannonBall.FireUpAndOver(newAngle,framesHeld);
-
+                //cannonBall.FireUpAndOver(newAngle,framesHeld);
+                GetComponent<SpawnProjectile>().FireUpAndOver(newAngle,framesHeld);
             }
         }
 
         if(Input.GetKey(KeyCode.R)) {
             Init();
             //reset cannon ball
-            cannonBall.Init();
             resetBoxes();
         }
     }
@@ -77,7 +73,10 @@ public class CannonBehavior : MonoBehaviour {
     }
 
     private void resetBoxes(){
-        foreach(Boxy box in boxys){
+        /*foreach(Boxy box in boxys){
+            box.Reset();
+        }*/
+        foreach(BoxySolution box in boxys){
             box.Reset();
         }
 

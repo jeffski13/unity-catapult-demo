@@ -36,7 +36,9 @@ public class MaterialSwitcher : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision){
         if(collision.gameObject.tag == "CannonBall"){
-            changeMaterial("Hit");
+            if(collision.gameObject.GetComponent<Projectile>().getIsActive()){
+                changeMaterial("Hit");
+            }
         }
     }
 }
