@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//attached to the canon game object
+//acts as the game manager
+
 public class CannonBehavior : MonoBehaviour {
 
-//true if on last frame, fire button was down
+    //true if on last frame, fire button was down
     private bool fire1Down = false;
     //number of frames fire button was held
     private int framesHeld = 0;
@@ -23,9 +26,11 @@ public class CannonBehavior : MonoBehaviour {
     [SerializeField]
     private Image powerbar;
 
+    //reference to the cannon ball
     [SerializeField]
     private CannonBallBehavior cannonBall;
 
+    //referecne to the cannon body (the neck and muzzle of the cannon)
     [SerializeField]
     private CannonBodyBehavior cannonBody;
 
@@ -60,6 +65,7 @@ public class CannonBehavior : MonoBehaviour {
             Init();
             //reset cannon ball
             cannonBall.Init();
+            //reset boxes
             resetBoxes();
         }
     }
@@ -77,6 +83,7 @@ public class CannonBehavior : MonoBehaviour {
     }
 
     private void resetBoxes(){
+        //call each box's reset method
         foreach(Boxy box in boxys){
             box.Reset();
         }
