@@ -15,6 +15,7 @@ public class BoxySolution : MonoBehaviour {
         this.transform.eulerAngles = Vector3.zero;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //this is the only new line; it calls the material switcher to reset the materials to default
         GetComponent<MaterialSwitcher>().Reset();
     }
 

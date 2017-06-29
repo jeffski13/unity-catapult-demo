@@ -10,8 +10,6 @@ public class CannonBallBehavior : MonoBehaviour {
     void Start() {
         missleStartPos = this.transform.position;
         GetComponent<Rigidbody>().useGravity = false;
-
-        //Init();
     }
 
     // Update is called once per frame
