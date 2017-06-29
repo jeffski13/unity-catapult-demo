@@ -5,9 +5,11 @@ using UnityEngine;
 //apply to objects with Boxy script
 //manages changing the objects material when hit
 public class MaterialSwitcher : MonoBehaviour {
-	private Vector3 startPos;
+    //my start material reference
     public Material defaultMaterial;
+    //material to change to when hit
     public Material hitMaterial;
+    //the renderer component
     private Renderer render;
 
 	// Use this for initialization
@@ -19,6 +21,7 @@ public class MaterialSwitcher : MonoBehaviour {
         changeMaterial("Default");
     }
 
+    //function to switch materials based on the state given
     private void changeMaterial(string state){
         
         if(state == "Hit"){
@@ -34,8 +37,15 @@ public class MaterialSwitcher : MonoBehaviour {
 
     }
 
+    //check when something collides with me if it is something I care about
+    //right now a box should only care if a cannon ball hits it
     void OnCollisionEnter(Collision collision){
+        //check by tag; could also check by class but useful for cases where 2 objects 
+        //may have the same class but serve different roles in the scene
         if(collision.gameObject.tag == "CannonBall"){
+            //check to see if the cannon ball is "active" or a "live" shot and should be used to calculate points
+            //a "dead" cannon ball shoudln't increase points 
+            //(not to be confused with destroyed cannon ball which no longer exists)
             if(collision.gameObject.GetComponent<Projectile>().getIsActive()){
                 changeMaterial("Hit");
             }
