@@ -15,13 +15,13 @@ public class RotationManager : MonoBehaviour {
     private float minYAimAngle = -45; // ex: 45
     private float maxYAimAngle = 45; //ex: 90
 
-    private CannonBehavior cannon;
+    private CannonBehaviorSolution cannon;
 
     [SerializeField]
     private CannonBodyBehavior cannonBody;
 
     void Start(){
-    	cannon = GetComponent<CannonBehavior>();
+    	cannon = GetComponent<CannonBehaviorSolution>();
     }
 
     void Update(){
@@ -35,6 +35,7 @@ public class RotationManager : MonoBehaviour {
     		cannonBody.transform.eulerAngles = new Vector3(currentVerticalRotation,cannonBody.transform.eulerAngles.y, cannonBody.transform.eulerAngles.z);
     	}
     	if(Input.GetAxis ("Horizontal")!=0){
+            print("Rotate");
     		//using forces which moves the cannon and the cannon ball through Physics!
     		////cannon.GetComponent<Rigidbody>().AddForce(cannon.transform.right * Input.GetAxis ("Horizontal") * 10);
 

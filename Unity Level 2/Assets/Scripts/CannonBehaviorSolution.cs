@@ -73,9 +73,6 @@ public class CannonBehaviorSolution : MonoBehaviour {
     }
 
     private void resetBoxes(){
-        /*foreach(Boxy box in boxys){
-            box.Reset();
-        }*/
         foreach(BoxySolution box in boxys){
             box.Reset();
         }
