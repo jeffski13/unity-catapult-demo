@@ -59,11 +59,14 @@ public class CannonBehaviorSolution : MonoBehaviour {
                 //the code actually could live here if needed
                 //the SpawnProjectile needs a spawn point reference and the prefab to instantiate
                 GetComponent<SpawnProjectile>().FireUpAndOver(newAngle,framesHeld);
+
+                //begin the cooldown sequence
+                StartCoroutine(powerDown());
             }
         }
 
         if(Input.GetKey(KeyCode.R)) {
-            Init();
+            ////Init();
             //reset all the boxes
             resetBoxes();
         }
@@ -87,5 +90,20 @@ public class CannonBehaviorSolution : MonoBehaviour {
             box.Reset();
         }
 
+    }
+
+    //cooldown coroutine
+    //after firing, the coroutine handles subtracting power and updating UI
+    //there is a wait for seconds in the while loop to slow down the effect over several frames
+    //the cooldown can be sped up by either increasing the subtractPower or by decreasing the wait time
+    IEnumerator powerDown() {
+        int subtractPower = 4;
+        while (framesHeld > 0){
+            framesHeld -= subtractPower;
+            powerbar.fillAmount = (float)framesHeld / FRAMES_HELD_MAX;
+            powerText.text="Power: "+framesHeld;
+            yield return new WaitForSeconds(.025f);
+        }
+        Init();
     }
 }
