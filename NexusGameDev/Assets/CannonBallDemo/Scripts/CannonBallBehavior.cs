@@ -57,6 +57,9 @@ public class CannonBallBehavior : MonoBehaviour {
 
         if(Input.GetKey(KeyCode.R)) {
             Init();
+            foreach(Boxy box in boxys){
+                box.Reset();
+            }
         }
     }
 
@@ -79,10 +82,6 @@ public class CannonBallBehavior : MonoBehaviour {
         //reset state for firing
         mizzilesFired = false;
         framesHeld = 0;
-
-        foreach(Boxy box in boxys){
-            box.Reset();
-        }
     }
 
     
